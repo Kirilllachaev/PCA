@@ -4,13 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#121212"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/button"
         android:layout_width="320dp"
         android:layout_height="83dp"
-        android:backgroundTint="#130D0D"
+        android:autoText="false"
+        android:backgroundTint="#121212"
+        android:backgroundTintMode="add"
+        android:checkable="true"
+        android:clickable="true"
+        android:contextClickable="false"
         android:fontFamily="@font/cormorant_garamond_bold"
         android:singleLine="false"
         android:text="Регистрация"
@@ -20,5 +26,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.9" />
+        app:layout_constraintVertical_bias="0.9"
+        app:strokeColor="#5A5555"
+        android:background="@drawable/my_button_bg"
+        />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="320dp"
+        android:layout_height="83dp"
+        android:backgroundTint="#FFFFFF"
+        android:fontFamily="@font/cormorant_garamond_bold"
+        android:singleLine="false"
+        android:text="Войти"
+        android:textColor="#121212"
+        android:textSize="20sp"
+        app:cornerRadius="90px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7" />
 </androidx.constraintlayout.widget.ConstraintLayout>
