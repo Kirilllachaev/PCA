@@ -100,6 +100,10 @@
         "source": "C:\\Users\\Roma\\Documents\\GitHub\\PCA\\Android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\Users\\Roma\\Documents\\GitHub\\PCA\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_mirea.png.flat",
+        "source": "C:\\Users\\Roma\\Documents\\GitHub\\PCA\\Android\\app\\src\\main\\res\\drawable\\mirea.png"
+    },
+    {
         "merged": "C:\\Users\\Roma\\Documents\\GitHub\\PCA\\Android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\Roma\\Documents\\GitHub\\PCA\\Android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
@@ -122,10 +126,6 @@
     {
         "merged": "C:\\Users\\Roma\\Documents\\GitHub\\PCA\\Android\\app\\build\\intermediates\\res\\merged\\debug\\font_lily_script_one.xml.flat",
         "source": "C:\\Users\\Roma\\Documents\\GitHub\\PCA\\Android\\app\\src\\main\\res\\font\\lily_script_one.xml"
-    },
-    {
-        "merged": "C:\\Users\\Roma\\Documents\\GitHub\\PCA\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_my_button_bg.xml.flat",
-        "source": "C:\\Users\\Roma\\Documents\\GitHub\\PCA\\Android\\app\\src\\main\\res\\drawable\\my_button_bg.xml"
     },
     {
         "merged": "C:\\Users\\Roma\\Documents\\GitHub\\PCA\\Android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",

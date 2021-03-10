@@ -1362,6 +1362,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable mirea
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
 drawable mtrl_ic_arrow_drop_down
@@ -1371,7 +1372,6 @@ drawable mtrl_ic_error
 drawable mtrl_popupmenu_background
 drawable mtrl_popupmenu_background_dark
 drawable mtrl_tabs_default_indicator
-drawable my_button_bg
 drawable navigation_empty_icon
 drawable notification_action_background
 drawable notification_bg
@@ -1479,9 +1479,9 @@ id barrier
 id beginning
 id blocking
 id bottom
-id button
-id button2
+id buttonIN
 id buttonPanel
+id buttonREG
 id cancel_button
 id center
 id center_horizontal
@@ -1517,6 +1517,8 @@ id dimensions
 id direct
 id disableHome
 id dropdown_menu
+id editTextTextEmailAddress
+id editTextTextPassword
 id edit_query
 id end
 id enterAlways
@@ -1545,6 +1547,7 @@ id icon
 id icon_group
 id ifRoom
 id image
+id imageView4
 id info
 id invisible
 id italic
