@@ -1,0 +1,4 @@
+com/example/apc/BuildConfig.java
+ com.example.apc.BuildConfig
+com/example/apc/MainActivity.java
+ com.example.apc.MainActivity
