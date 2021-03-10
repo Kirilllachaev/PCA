@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/</item>
+        <item>@font/aclonica</item>
+        <item>@font/alfa_slab_one</item>
+        <item>@font/almendra_display</item>
+        <item>@font/asset</item>
+        <item>@font/bad_script</item>
+        <item>@font/balthazar</item>
+        <item>@font/biorhyme_extralight</item>
+        <item>@font/bonbon</item>
+        <item>@font/cormorant_garamond_bold</item>
+        <item>@font/fruktur</item>
+        <item>@font/happy_monkey</item>
+        <item>@font/kite_one</item>
+        <item>@font/leckerli_one</item>
+        <item>@font/lemon</item>
+        <item>@font/lily_script_one</item>
+        <item>@font/mountains_of_christmas</item>
+        <item>@font/noto_sans</item>
+        <item>@font/oleo_script</item>
+        <item>@font/roboto_thin</item>
+    </array>
+</resources>
