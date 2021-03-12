@@ -1,0 +1,23 @@
+MySqlConnection connection =new MySqlConnection("server=a321377.mysql.mchost.ru;port=3306;username=a321377_PCA;password=u1dH513u23;database=a321377_PCA");
+
+
+        public void OpenConnection()
+        {
+            if(connection.State == System.Data.ConnectionState.Closed)
+            {
+                connection.Open();
+            }
+        }
+
+        public void CloseConnection()
+        {
+            if (connection.State == System.Data.ConnectionState.Open)
+            {
+                connection.Close();
+            }
+        }
+
+       public MySqlConnection GetConnection()
+        {
+            return connection;
+        }
