@@ -35,7 +35,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -66,22 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="IBMPlexSans-Bold.ttf" />
-    <None Include="IBMPlexSans-BoldItalic.ttf" />
-    <None Include="IBMPlexSans-ExtraLight.ttf" />
-    <None Include="IBMPlexSans-ExtraLightItalic.ttf" />
-    <None Include="IBMPlexSans-Italic.ttf" />
-    <None Include="IBMPlexSans-Light.ttf" />
-    <None Include="IBMPlexSans-LightItalic.ttf" />
-    <None Include="IBMPlexSans-Medium.ttf" />
-    <None Include="IBMPlexSans-MediumItalic.ttf" />
-    <None Include="IBMPlexSans-Regular.ttf" />
-    <None Include="IBMPlexSans-SemiBold.ttf" />
-    <None Include="IBMPlexSans-SemiBoldItalic.ttf" />
-    <None Include="IBMPlexSans-Thin.ttf" />
-    <None Include="IBMPlexSans-ThinItalic.ttf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -94,15 +78,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Icons\Button.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Icons\Button-Dark.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Icons\Logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -21,7 +21,7 @@ namespace PCA
 			//path.AddEllipse(0, 0, 50, 40);// сам поэксперементируй.
 			//Region rgn = new Region(path);
 			//button1.Region = rgn;
-		//	button1.BackgroundImage = Image.FromFile(@"c:\Program Files\DAEMON Tools Toolbar\Resources\RadioDown.bmp");
+			//button1.BackgroundImage = Image.FromFile(@"c:\Program Files\DAEMON Tools Toolbar\Resources\RadioDown.bmp");
 			//button1.Click += new EventHandler(button1_Click);
 
 			
@@ -35,27 +35,6 @@ namespace PCA
 
 
 		private void button3_Click(object sender, EventArgs e)
-		{
-
-		}
-
-
-		private void label1_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void textBox2_TextChanged(object sender, EventArgs e)
-		{
-
-		}
-
-		private void textBox2_TextChanged_1(object sender, EventArgs e)
-		{
-
-		}
-
-		private void textBox1_TextChanged(object sender, EventArgs e)
 		{
 
 		}
