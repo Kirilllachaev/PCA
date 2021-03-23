@@ -165,6 +165,7 @@ namespace PCA
 				FirebaseResponse response = Program.client.Get("Users/");
 				Dictionary<string, Data> result = response.ResultAs<Dictionary<string, Data>>();
 
+
 				bool Already = false;
 				int baseIndex = 0;
 
@@ -179,6 +180,10 @@ namespace PCA
 							Already = true;
 						}
 					}
+				}
+				else
+				{
+					Already = false;
 				}
 				
 

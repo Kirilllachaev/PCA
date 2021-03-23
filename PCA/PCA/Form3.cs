@@ -21,8 +21,8 @@ namespace PCA
 
 			InitializeComponent();
 
-			
 
+			
 			FirebaseResponse response1 = Program.client.Get("Users/" + Properties.Settings.Default.UsName.ToString());
 			Data result1 = response1.ResultAs<Data>();
 			

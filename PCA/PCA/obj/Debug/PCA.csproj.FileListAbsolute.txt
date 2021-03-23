@@ -7,7 +7,6 @@ C:\Users\73961\Documents\GitHub\PCA\PCA\PCA\obj\Debug\PCA.csproj.GenerateResourc
 C:\Users\73961\Documents\GitHub\PCA\PCA\PCA\obj\Debug\PCA.csproj.CoreCompileInputs.cache
 C:\Users\73961\Documents\GitHub\PCA\PCA\PCA\obj\Debug\PCA.exe
 C:\Users\73961\Documents\GitHub\PCA\PCA\PCA\obj\Debug\PCA.pdb
-C:\Users\73961\Documents\GitHub\PCA\PCA\PCA\bin\Debug\JTextBox.dll
 C:\Users\73961\Documents\GitHub\PCA\PCA\PCA\obj\Debug\PCA.csproj.CopyComplete
 C:\Users\73961\Documents\GitHub\PCA\PCA\PCA\bin\Debug\FireSharp.dll
 C:\Users\73961\Documents\GitHub\PCA\PCA\PCA\bin\Debug\Newtonsoft.Json.dll

@@ -16,8 +16,8 @@ namespace PCA
 
 		static IFirebaseConfig config = new FirebaseConfig
 		{
-			AuthSecret = "T5jdGMn2TRo9q9G6Ms3ieap5hUbjD28hGNXFPSC3",
-			BasePath = "https://pca-mirea-default-rtdb.europe-west1.firebasedatabase.app/"
+			AuthSecret = "IYDgv1zkiw1GFEkSbbWpGn3yDhGluPwMuBA38ABw",
+			BasePath = "https://mirea-e3916-default-rtdb.firebaseio.com/"
 		};
 
 		public static IFirebaseClient client;
