@@ -22,7 +22,7 @@ namespace PCA
 			InitializeComponent();
 
 
-			
+		   
 			FirebaseResponse response1 = Program.client.Get("Users/" + Properties.Settings.Default.UsName.ToString());
 			Data result1 = response1.ResultAs<Data>();
 			
@@ -45,7 +45,7 @@ namespace PCA
 
 		private void Form3_Load(object sender, EventArgs e)
 		{
-
+			
 		}
 
 		private void label1_Click(object sender, EventArgs e)
@@ -65,19 +65,27 @@ namespace PCA
 
 		private void button_WOC1_Click(object sender, EventArgs e)
 		{
-			//Добавить ПК
-			//Environment.MachineName;
-
 			FirebaseResponse response1 = Program.client.Delete("Users/" + Properties.Settings.Default.UsName.ToString()  + "/Desktops/" + SystemInformation.ComputerName);
 			Data result1 = response1.ResultAs<Data>();
 
 			Properties.Settings.Default.UsName = "";
 			Properties.Settings.Default.Save();
 
+			this.Close();
+			Program.form1 = new Form1();
+			Program.form1.Show();
 
-			Form1 form1 = new Form1();
-			this.Hide();
-			form1.ShowDialog();
+		}
+
+
+		private void Form3_FormClosed(object sender, FormClosedEventArgs e)
+		{
+			Program.form4.ShowNotification();
+		}
+
+		private void Form3_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			
 		}
 	}
 }

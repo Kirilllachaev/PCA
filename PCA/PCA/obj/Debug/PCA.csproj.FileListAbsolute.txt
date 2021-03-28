@@ -54,3 +54,7 @@ D:\Users\73961\Documents\GitHub\PCA\PCA\PCA\obj\Debug\PCA.csproj.CoreCompileInpu
 D:\Users\73961\Documents\GitHub\PCA\PCA\PCA\obj\Debug\PCA.csproj.CopyComplete
 D:\Users\73961\Documents\GitHub\PCA\PCA\PCA\obj\Debug\PCA.exe
 D:\Users\73961\Documents\GitHub\PCA\PCA\PCA\obj\Debug\PCA.pdb
+C:\Users\73961\Documents\GitHub\PCA\PCA\PCA\bin\Debug\PCA.exe.manifest
+C:\Users\73961\Documents\GitHub\PCA\PCA\PCA\bin\Debug\PCA.application
+C:\Users\73961\Documents\GitHub\PCA\PCA\PCA\obj\Debug\PCA.exe.manifest
+C:\Users\73961\Documents\GitHub\PCA\PCA\PCA\obj\Debug\PCA.application

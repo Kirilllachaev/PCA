@@ -28,63 +28,18 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.pictureBox3 = new System.Windows.Forms.PictureBox();
-			this.pictureBox2 = new System.Windows.Forms.PictureBox();
-			this.button_WOC1 = new ePOSOne.btnProduct.Button_WOC();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
+			this.pictureBox3 = new System.Windows.Forms.PictureBox();
+			this.pictureBox2 = new System.Windows.Forms.PictureBox();
+			this.button_WOC1 = new ePOSOne.btnProduct.Button_WOC();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			this.SuspendLayout();
-			// 
-			// pictureBox3
-			// 
-			this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.pictureBox3.Cursor = System.Windows.Forms.Cursors.SizeAll;
-			this.pictureBox3.Image = global::PCA.Properties.Resources.lockicon;
-			this.pictureBox3.Location = new System.Drawing.Point(-245, 249);
-			this.pictureBox3.Name = "pictureBox3";
-			this.pictureBox3.Size = new System.Drawing.Size(43, 45);
-			this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-			this.pictureBox3.TabIndex = 24;
-			this.pictureBox3.TabStop = false;
-			// 
-			// pictureBox2
-			// 
-			this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.pictureBox2.Cursor = System.Windows.Forms.Cursors.SizeAll;
-			this.pictureBox2.Image = global::PCA.Properties.Resources.Слой_2;
-			this.pictureBox2.Location = new System.Drawing.Point(-245, 184);
-			this.pictureBox2.Name = "pictureBox2";
-			this.pictureBox2.Size = new System.Drawing.Size(43, 45);
-			this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-			this.pictureBox2.TabIndex = 23;
-			this.pictureBox2.TabStop = false;
-			// 
-			// button_WOC1
-			// 
-			this.button_WOC1.BorderColor = System.Drawing.Color.White;
-			this.button_WOC1.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-			this.button_WOC1.FlatAppearance.BorderSize = 0;
-			this.button_WOC1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-			this.button_WOC1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-			this.button_WOC1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button_WOC1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button_WOC1.Location = new System.Drawing.Point(46, 435);
-			this.button_WOC1.Name = "button_WOC1";
-			this.button_WOC1.OnClickedButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-			this.button_WOC1.OnHoverBorderColor = System.Drawing.Color.Silver;
-			this.button_WOC1.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-			this.button_WOC1.OnHoverTextColor = System.Drawing.Color.Silver;
-			this.button_WOC1.Size = new System.Drawing.Size(210, 53);
-			this.button_WOC1.TabIndex = 20;
-			this.button_WOC1.Text = "Выйти";
-			this.button_WOC1.TextColor = System.Drawing.Color.White;
-			this.button_WOC1.UseVisualStyleBackColor = true;
-			this.button_WOC1.Click += new System.EventHandler(this.button_WOC1_Click);
 			// 
 			// label1
 			// 
@@ -144,6 +99,52 @@
 			this.label5.TabIndex = 29;
 			this.label5.Text = "________________________________________";
 			// 
+			// pictureBox3
+			// 
+			this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.pictureBox3.Cursor = System.Windows.Forms.Cursors.SizeAll;
+			this.pictureBox3.Image = global::PCA.Properties.Resources.lockicon;
+			this.pictureBox3.Location = new System.Drawing.Point(-245, 249);
+			this.pictureBox3.Name = "pictureBox3";
+			this.pictureBox3.Size = new System.Drawing.Size(43, 45);
+			this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+			this.pictureBox3.TabIndex = 24;
+			this.pictureBox3.TabStop = false;
+			// 
+			// pictureBox2
+			// 
+			this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.pictureBox2.Cursor = System.Windows.Forms.Cursors.SizeAll;
+			this.pictureBox2.Image = global::PCA.Properties.Resources.Слой_2;
+			this.pictureBox2.Location = new System.Drawing.Point(-245, 184);
+			this.pictureBox2.Name = "pictureBox2";
+			this.pictureBox2.Size = new System.Drawing.Size(43, 45);
+			this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+			this.pictureBox2.TabIndex = 23;
+			this.pictureBox2.TabStop = false;
+			// 
+			// button_WOC1
+			// 
+			this.button_WOC1.BorderColor = System.Drawing.Color.White;
+			this.button_WOC1.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+			this.button_WOC1.FlatAppearance.BorderSize = 0;
+			this.button_WOC1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.button_WOC1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.button_WOC1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button_WOC1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.button_WOC1.Location = new System.Drawing.Point(46, 435);
+			this.button_WOC1.Name = "button_WOC1";
+			this.button_WOC1.OnClickedButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+			this.button_WOC1.OnHoverBorderColor = System.Drawing.Color.Silver;
+			this.button_WOC1.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+			this.button_WOC1.OnHoverTextColor = System.Drawing.Color.Silver;
+			this.button_WOC1.Size = new System.Drawing.Size(210, 53);
+			this.button_WOC1.TabIndex = 20;
+			this.button_WOC1.Text = "Выйти";
+			this.button_WOC1.TextColor = System.Drawing.Color.White;
+			this.button_WOC1.UseVisualStyleBackColor = true;
+			this.button_WOC1.Click += new System.EventHandler(this.button_WOC1_Click);
+			// 
 			// Form3
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -159,8 +160,11 @@
 			this.Controls.Add(this.pictureBox2);
 			this.Controls.Add(this.button_WOC1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "Form3";
 			this.Text = "Form3";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form3_FormClosing);
+			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form3_FormClosed);
 			this.Load += new System.EventHandler(this.Form3_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

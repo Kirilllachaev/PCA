@@ -79,7 +79,7 @@ namespace PCA
 							bool already = false;
 							float baseindex = 0;
 
-							MessageBox.Show(result2.Count.ToString());
+							
 
 							foreach (var get2 in result2)
 							{		
@@ -87,7 +87,7 @@ namespace PCA
 
 								if (get2.Value.Name == SystemInformation.ComputerName) 
 								{
-									MessageBox.Show("DA");
+									
 									already = true;
 								}
 
@@ -106,22 +106,24 @@ namespace PCA
 								FirebaseResponse response3 = Program.client.Set("Users/" + nameR + "/Desktops/" + desk.Name, desk);
 							}
 
-							Program.UsName = data.login;
+							
 							Properties.Settings.Default.UsName = data.login;
 							Properties.Settings.Default.Save();
+
 							Already = true;
 
 
 							jText_Box2.TextInput = "";
 							jText_Box1.TextInput = "";
-							MessageBox.Show("Пользователь авторизован");
-
-							Form3 form3 = new Form3();
-							this.Hide();
-							form3.ShowDialog();
 
 
-							
+
+
+							this.Close();
+							Program.form3 = new Form3();
+							Program.form3.Show();
+
+
 							return;
 						}
 						
@@ -203,25 +205,19 @@ namespace PCA
 						Status = System.DateTime.Today.ToString()
 					};
 
-					
-
-					int one = 1;
-
 					FirebaseResponse responseRa = Program.client.Set("Users/" + data.login + "/Desktops/" + desk.Name, desk);
 
 					jText_Box2.TextInput = "";
 					jText_Box1.TextInput = "";
-					MessageBox.Show("Пользователь зарегистрирован");
-
-					//Program.UsName = data.login;
+					
 					Properties.Settings.Default.UsName = data.login;
 					Properties.Settings.Default.Save();
 
 
-					Form3 form3 = new Form3();
-					this.Hide();
-					form3.ShowDialog();
-				    
+					this.Close();
+					Program.form3 = new Form3();
+					Program.form3.Show();
+
 					return;
 
 				}
@@ -252,6 +248,9 @@ namespace PCA
 
 		}
 
-		
+		private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+		{
+			Program.form4.ShowNotification();
+		}
 	}
 }

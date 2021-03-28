@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -7,12 +8,16 @@ using System.Windows.Forms;
 using FireSharp.Config;
 using FireSharp.Interfaces;
 using FireSharp.Response;
+using Microsoft.Win32;
 
 namespace PCA
 {
 	static class Program
 	{
-		public static string UsName;
+		public static Form1 form1;
+		public static Form3 form3;
+		public static Form4 form4;
+
 
 		static IFirebaseConfig config = new FirebaseConfig
 		{
@@ -21,6 +26,7 @@ namespace PCA
 		};
 
 		public static IFirebaseClient client;
+		public static Timer tm;
 
 		/// <summary>
 		/// Главная точка входа для приложения.
@@ -30,7 +36,14 @@ namespace PCA
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			//Properties.Settings.Default.
+
+			SetAutorunValue(true);
+			Properties.Settings.Default.Desktop = "Yes";
+
+			tm = new Timer();
+			tm.Enabled = true;
+			tm.Interval = 60000;//пять минут в милисекундах
+			tm.Tick += new EventHandler(tm_Tick);
 
 			try
 			{
@@ -41,28 +54,74 @@ namespace PCA
 				MessageBox.Show("Fail");
 			}
 
-			if (!string.IsNullOrEmpty(Properties.Settings.Default.UsName)) 
+
+			ChoseForm();
+			form4 = new Form4();
+			Application.Run(form4);
+
+		}
+
+		
+		
+
+		public static void tm_Tick(object sender, EventArgs e)
+		{
+			MessageBox.Show("Сработало");
+		}
+
+
+		public static void ChoseForm()
+		{
+
+			if (!string.IsNullOrEmpty(Properties.Settings.Default.UsName))
 			{
 				FirebaseResponse response1 = Program.client.Get("Users/" + Properties.Settings.Default.UsName.ToString());
 				Data result1 = response1.ResultAs<Data>();
 
-				if(result1 != null)
+				if (result1 != null)
 				{
-					Application.Run(new Form3());
+					form3 = new Form3();
+					form3.Show();
+					//Application.Run(form3);
 				}
 				else
 				{
-					Application.Run(new Form1());
+					form1 = new Form1();
+					form1.Show();
+					//Application.Run(form1);	
 				}
 			}
 			else
 			{
-				Application.Run(new Form1());
+				form1 = new Form1();
+				form1.Show();
+				//Application.Run(form1);
 			}
+		}
+
+		public static void SetAutorunValue(bool autorun)
+		{
+			if (string.IsNullOrEmpty(Properties.Settings.Default.Desktop))
+			{
+				string name = "PCAApp";
+				string ExePath = System.Windows.Forms.Application.ExecutablePath;
+				RegistryKey reg;
+				reg = Registry.CurrentUser.CreateSubKey("Software\\Microsoft\\Windows\\CurrentVersion\\Run\\");
+				try
+				{
+					if (autorun)
+						reg.SetValue(name, ExePath);
+					else
+						reg.DeleteValue(name);
+
+					reg.Close();
+				}
+				catch
+				{
+					MessageBox.Show("Не удалось добавить в автозапуск");
+				}
 				
-
-			
-
+			}
 			
 		}
 	}
