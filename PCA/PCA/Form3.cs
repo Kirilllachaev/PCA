@@ -20,19 +20,18 @@ namespace PCA
 		{
 
 			InitializeComponent();
+			this.FormBorderStyle = FormBorderStyle.None;
+			this.MouseDown += new MouseEventHandler(Form3_MouseDown);
 
 
-		   
 			FirebaseResponse response1 = Program.client.Get("Users/" + Properties.Settings.Default.UsName.ToString());
 			Data result1 = response1.ResultAs<Data>();
 			
 
 			label1.Text = result1.login;
-		
 			label2.Text = SystemInformation.ComputerName;
 
-			this.FormBorderStyle = FormBorderStyle.None;
-			this.MouseDown += new MouseEventHandler(Form3_MouseDown);
+			
 
 		}
 
@@ -43,33 +42,15 @@ namespace PCA
 			this.WndProc(ref m);
 		}
 
-		private void Form3_Load(object sender, EventArgs e)
-		{
-			
-		}
-
-		private void label1_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void label4_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void label2_Click(object sender, EventArgs e)
-		{
-
-		}
 
 		private void button_WOC1_Click(object sender, EventArgs e)
 		{
-			FirebaseResponse response1 = Program.client.Delete("Users/" + Properties.Settings.Default.UsName.ToString()  + "/Desktops/" + SystemInformation.ComputerName);
-			Data result1 = response1.ResultAs<Data>();
+			//FirebaseResponse response1 = Program.client.Delete("Users/" + Properties.Settings.Default.UsName.ToString()  + "/Desktops/" + SystemInformation.ComputerName);
+			//Data result1 = response1.ResultAs<Data>();
 
 			Properties.Settings.Default.UsName = "";
 			Properties.Settings.Default.Save();
+			Program.UserIsCorrect = false;
 
 			this.Close();
 			Program.form1 = new Form1();
@@ -86,6 +67,27 @@ namespace PCA
 		private void Form3_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			
+		}
+
+
+		private void Form3_Load(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label1_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label4_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label2_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

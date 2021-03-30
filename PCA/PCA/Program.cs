@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,6 +18,7 @@ namespace PCA
 		public static Form1 form1;
 		public static Form3 form3;
 		public static Form4 form4;
+		public static bool UserIsCorrect;
 
 
 		static IFirebaseConfig config = new FirebaseConfig
@@ -32,18 +34,18 @@ namespace PCA
 		/// Главная точка входа для приложения.
 		/// </summary>
 		[STAThread]
-		static void Main()
+		static void Main(string[] args)
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 
 			SetAutorunValue(true);
-			Properties.Settings.Default.Desktop = "Yes";
+			//Properties.Settings.Default.Desktop = "Yes";
 
-			tm = new Timer();
-			tm.Enabled = true;
-			tm.Interval = 60000;//пять минут в милисекундах
-			tm.Tick += new EventHandler(tm_Tick);
+			//tm = new Timer();
+			//tm.Enabled = true;
+			//tm.Interval = 60000;//пять минут в милисекундах
+			//tm.Tick += new EventHandler(tm_Tick);
 
 			try
 			{
@@ -55,14 +57,19 @@ namespace PCA
 			}
 
 
+			
+
+
 			ChoseForm();
 			form4 = new Form4();
 			Application.Run(form4);
 
 		}
 
-		
-		
+
+
+
+
 
 		public static void tm_Tick(object sender, EventArgs e)
 		{
@@ -72,7 +79,6 @@ namespace PCA
 
 		public static void ChoseForm()
 		{
-
 			if (!string.IsNullOrEmpty(Properties.Settings.Default.UsName))
 			{
 				FirebaseResponse response1 = Program.client.Get("Users/" + Properties.Settings.Default.UsName.ToString());
@@ -80,22 +86,20 @@ namespace PCA
 
 				if (result1 != null)
 				{
+					UserIsCorrect = true;
 					form3 = new Form3();
 					form3.Show();
-					//Application.Run(form3);
 				}
 				else
 				{
 					form1 = new Form1();
 					form1.Show();
-					//Application.Run(form1);	
 				}
 			}
 			else
 			{
 				form1 = new Form1();
 				form1.Show();
-				//Application.Run(form1);
 			}
 		}
 
@@ -103,7 +107,7 @@ namespace PCA
 		{
 			if (string.IsNullOrEmpty(Properties.Settings.Default.Desktop))
 			{
-				string name = "PCAApp";
+				string name = "PCA_StartUp";
 				string ExePath = System.Windows.Forms.Application.ExecutablePath;
 				RegistryKey reg;
 				reg = Registry.CurrentUser.CreateSubKey("Software\\Microsoft\\Windows\\CurrentVersion\\Run\\");

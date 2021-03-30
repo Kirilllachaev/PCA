@@ -36,6 +36,13 @@ namespace PCA
 
 		private void Form4_Load(object sender, EventArgs e)
 		{
+			if (Program.UserIsCorrect) 
+			{
+				if (Environment.TickCount < 10000)
+				{
+					Program.client.Set("Users/" + Properties.Settings.Default.UsName.ToString() + "/Desktops/" + SystemInformation.ComputerName.ToString() + "/Story/Включение", DateTime.Now.AddMilliseconds(-Environment.TickCount));
+				}
+			}
 			
 		}
 
@@ -53,7 +60,11 @@ namespace PCA
 		{
 			if (e.CloseReason == CloseReason.WindowsShutDown)
 			{
-				FirebaseResponse response3 = Program.client.Set("Users/jghj" , "fsdf");
+				if (Program.UserIsCorrect) 
+				{
+					Program.client.Set("Users/" + Properties.Settings.Default.UsName.ToString() + "/Desktops/" + SystemInformation.ComputerName.ToString() + "/Story/Выключение", DateTime.Now);
+				}
+				
 			}
 		}
 	}

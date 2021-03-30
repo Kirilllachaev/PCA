@@ -109,6 +109,7 @@ namespace PCA
 							
 							Properties.Settings.Default.UsName = data.login;
 							Properties.Settings.Default.Save();
+							Program.UserIsCorrect = true;
 
 							Already = true;
 
@@ -212,6 +213,7 @@ namespace PCA
 					
 					Properties.Settings.Default.UsName = data.login;
 					Properties.Settings.Default.Save();
+					Program.UserIsCorrect = true;
 
 
 					this.Close();

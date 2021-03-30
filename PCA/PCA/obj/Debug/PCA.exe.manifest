@@ -114,14 +114,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PCA.exe" size="143840">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PCA.exe" size="122336">
       <assemblyIdentity name="PCA" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>TOxZc/0bXrAAEJSYlpAHdIt5IdNeBWppBgDVHySVRW0=</dsig:DigestValue>
+        <dsig:DigestValue>a+HUvfFPNflPF9yWQkJJwyVYsIUrSQNiSqM1jf8Yxes=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
