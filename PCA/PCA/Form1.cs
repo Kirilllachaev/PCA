@@ -99,8 +99,6 @@ namespace PCA
 								var desk = new DeskTop()
 								{
 									Name = SystemInformation.ComputerName,
-									Story = new PCHistory(),
-									Status = System.DateTime.Today.ToString()
 								};
 
 								FirebaseResponse response3 = Program.client.Set("Users/" + nameR + "/Desktops/" + desk.Name, desk);
@@ -202,8 +200,6 @@ namespace PCA
 					var desk = new DeskTop()
 					{
 						Name = SystemInformation.ComputerName,
-						Story = new PCHistory(),
-						Status = System.DateTime.Today.ToString()
 					};
 
 					FirebaseResponse responseRa = Program.client.Set("Users/" + data.login + "/Desktops/" + desk.Name, desk);

@@ -11,6 +11,8 @@ using FireSharp.Interfaces;
 using FireSharp.Response;
 using Microsoft.Win32;
 
+using Microsoft.Win32.TaskScheduler;
+
 namespace PCA
 {
 	static class Program
@@ -29,6 +31,7 @@ namespace PCA
 
 		public static IFirebaseClient client;
 		public static Timer tm;
+		public static bool AutoStart;
 
 		/// <summary>
 		/// Главная точка входа для приложения.
@@ -40,6 +43,17 @@ namespace PCA
 			Application.SetCompatibleTextRenderingDefault(false);
 
 			SetAutorunValue(true);
+			AutoStart = false;
+
+			foreach (string S in args)
+			{
+				if (S.Contains("autostart"))
+				{
+					AutoStart = true;
+					break;
+				}
+			}
+
 			//Properties.Settings.Default.Desktop = "Yes";
 
 			//tm = new Timer();
@@ -56,13 +70,14 @@ namespace PCA
 				MessageBox.Show("Fail");
 			}
 
-
 			
-
-
 			ChoseForm();
+
 			form4 = new Form4();
 			Application.Run(form4);
+			AutoStart = false;
+
+			
 
 		}
 
@@ -105,28 +120,23 @@ namespace PCA
 
 		public static void SetAutorunValue(bool autorun)
 		{
-			if (string.IsNullOrEmpty(Properties.Settings.Default.Desktop))
+			string name = "PCA_StartUp";
+			string ExePath = System.Windows.Forms.Application.ExecutablePath;
+			RegistryKey reg;
+			reg = Registry.CurrentUser.CreateSubKey("Software\\Microsoft\\Windows\\CurrentVersion\\Run\\");
+			try
 			{
-				string name = "PCA_StartUp";
-				string ExePath = System.Windows.Forms.Application.ExecutablePath;
-				RegistryKey reg;
-				reg = Registry.CurrentUser.CreateSubKey("Software\\Microsoft\\Windows\\CurrentVersion\\Run\\");
-				try
-				{
-					if (autorun)
-						reg.SetValue(name, ExePath);
-					else
-						reg.DeleteValue(name);
+				if (autorun)
+					reg.SetValue(name, ExePath + " -autostart");
+				else
+					reg.DeleteValue(name);
 
-					reg.Close();
-				}
-				catch
-				{
-					MessageBox.Show("Не удалось добавить в автозапуск");
-				}
-				
+				reg.Close();
 			}
-			
+			catch
+			{
+				MessageBox.Show("Не удалось добавить в автозапуск");
+			}
 		}
 	}
 }

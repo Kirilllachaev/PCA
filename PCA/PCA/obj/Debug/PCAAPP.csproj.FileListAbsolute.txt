@@ -31,3 +31,12 @@ C:\Users\73961\Documents\GitHub\PCA\PCA\PCA\obj\Debug\PCA.exe
 C:\Users\73961\Documents\GitHub\PCA\PCA\PCA\obj\Debug\PCA.pdb
 C:\Users\73961\Documents\GitHub\PCA\PCA\PCA\obj\Debug\PCA.Form4.resources
 C:\Users\73961\Documents\GitHub\PCA\PCA\PCA\obj\Debug\PCAAPP.csprojAssemblyReference.cache
+C:\Users\73961\Documents\GitHub\PCA\PCA\PCA\bin\Debug\Microsoft.Win32.TaskScheduler.dll
+C:\Users\73961\Documents\GitHub\PCA\PCA\PCA\bin\Debug\Microsoft.Win32.TaskScheduler.xml
+C:\Users\73961\Documents\GitHub\PCA\PCA\PCA\bin\Debug\de\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\73961\Documents\GitHub\PCA\PCA\PCA\bin\Debug\es\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\73961\Documents\GitHub\PCA\PCA\PCA\bin\Debug\fr\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\73961\Documents\GitHub\PCA\PCA\PCA\bin\Debug\it\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\73961\Documents\GitHub\PCA\PCA\PCA\bin\Debug\pl\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\73961\Documents\GitHub\PCA\PCA\PCA\bin\Debug\ru\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\73961\Documents\GitHub\PCA\PCA\PCA\bin\Debug\zh-CN\Microsoft.Win32.TaskScheduler.resources.dll
