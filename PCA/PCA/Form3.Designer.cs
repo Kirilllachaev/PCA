@@ -159,10 +159,13 @@
 			this.Controls.Add(this.pictureBox3);
 			this.Controls.Add(this.pictureBox2);
 			this.Controls.Add(this.button_WOC1);
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			this.MaximizeBox = false;
+			this.MinimizeBox = false;
 			this.Name = "Form3";
-			this.Text = "Form3";
+			this.ShowInTaskbar = false;
+			this.Text = "Комьютер";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form3_FormClosing);
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form3_FormClosed);
 			this.Load += new System.EventHandler(this.Form3_Load);

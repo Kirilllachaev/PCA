@@ -22,8 +22,8 @@ namespace PCA
 		public Form1()
 		{
 			InitializeComponent();
-			this.FormBorderStyle = FormBorderStyle.None;
-			this.MouseDown += new MouseEventHandler(Form1_MouseDown);
+			//this.FormBorderStyle = FormBorderStyle.None;
+			//this.MouseDown += new MouseEventHandler(Form1_MouseDown);
 		}
 
 		private void Form1_Load(object sender, EventArgs e)
@@ -35,9 +35,9 @@ namespace PCA
 
 		void Form1_MouseDown(object sender, MouseEventArgs e)
 		{
-			base.Capture = false;
-			Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
-			this.WndProc(ref m);
+			//base.Capture = false;
+			//Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
+			//this.WndProc(ref m);
 		}
 
 

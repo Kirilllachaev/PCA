@@ -20,8 +20,9 @@ namespace PCA
 		{
 
 			InitializeComponent();
-			this.FormBorderStyle = FormBorderStyle.None;
-			this.MouseDown += new MouseEventHandler(Form3_MouseDown);
+
+			//this.FormBorderStyle = FormBorderStyle.None;
+			//this.MouseDown += new MouseEventHandler(Form3_MouseDown);
 
 
 			FirebaseResponse response1 = Program.client.Get("Users/" + Properties.Settings.Default.UsName.ToString());
@@ -37,9 +38,9 @@ namespace PCA
 
 		void Form3_MouseDown(object sender, MouseEventArgs e)
 		{
-			base.Capture = false;
-			Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
-			this.WndProc(ref m);
+			//base.Capture = false;
+			//Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
+			//this.WndProc(ref m);
 		}
 
 
