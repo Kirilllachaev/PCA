@@ -36,8 +36,8 @@ import java.io.OutputStreamWriter;
 import Models.User;
 
 public class MainActivity extends AppCompatActivity {
-//    private final String log_key="log_key";
-//    private SharedPreferences pref;
+    private final String log_key="log_key";
+    private SharedPreferences pref;
     private EditText logField,pasField;
     private FirebaseAuth auth;
     private DatabaseReference mDataBase;
@@ -48,17 +48,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_window);
+        init();
 //        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 //        if (user != null) {
 //            startActivity(new Intent(MainActivity.this,PekiActivity.class));
 //        } else {
-//            setContentView(R.layout.main_window);
+//
 //        }
 
     }
     private void init(){
 
-//        pref=getSharedPreferences("Login",MODE_PRIVATE);
+        pref=getSharedPreferences("Login",MODE_PRIVATE);
         root=findViewById(R.id.root_element);
         logField=findViewById(R.id.logField);
         pasField=findViewById(R.id.pasField);
@@ -99,23 +100,16 @@ public class MainActivity extends AppCompatActivity {
                     auth.signInWithEmailAndPassword(logField.getText().toString(),pasField.getText().toString())
                     .addOnSuccessListener(authResult -> {
                         startActivity(new Intent(MainActivity.this,PekiActivity.class));
-//                        SaveLog();
+                        SaveLog();
                         finish();
                     }).addOnFailureListener(e -> Snackbar.make(root,"Ошибка авторизации " + e.getMessage(),Snackbar.LENGTH_SHORT).show());
         }
-//        public void SaveLog()
-//        {
-//            SharedPreferences.Editor edit = pref.edit();
-//            edit.putString(log_key,logField.getText().toString());
-//            edit.apply();
-//        }
-//        public void SetLog()
-//        {
-//            if(pref.getString(log_key,null) = auth.getCurrentUser();
-//            {
-//                startActivity(new Intent(MainActivity.this, PekiActivity.class));
-//            }
-//        }
+        public void SaveLog()
+        {
+            SharedPreferences.Editor edit = pref.edit();
+            edit.putString(log_key,logField.getText().toString());
+            edit.apply();
+        }
     }
 
 

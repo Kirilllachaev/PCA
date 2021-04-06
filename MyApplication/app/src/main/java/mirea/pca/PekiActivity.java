@@ -12,6 +12,9 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -32,6 +35,7 @@ public class PekiActivity extends AppCompatActivity {
     private ArrayAdapter<String> adapter;
     private List<String> listData;
     private DatabaseReference mDataBase;
+    private FirebaseAuth auth;
     private String GET_KEY="Users";
 
     @Override
@@ -45,9 +49,10 @@ public class PekiActivity extends AppCompatActivity {
     private void init(){
         listView=findViewById(R.id.listView);
         listData=new ArrayList<>();
-        adapter=new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,listData);
-        listView.setAdapter(adapter);
+        adapter = new CustomListAdapter(this , R.layout.custom_list , listData);
+        listView.setAdapter( adapter);
         mDataBase= FirebaseDatabase.getInstance().getReference(GET_KEY);
+        auth=FirebaseAuth.getInstance();
     }
     private void getData()
     {
@@ -56,13 +61,38 @@ public class PekiActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot)
             {
+
+                FirebaseUser g = FirebaseAuth.getInstance().getCurrentUser();
+                String ID =  g.getUid();
+
                 if(listData.size() > 0)listData.clear();
                 for(DataSnapshot ds: dataSnapshot.getChildren())
                 {
-                    User user = ds.getValue(User.class);
+                    String user = ds.getKey();
                     assert user != null;
-                    listData.add(user.login);
+
+                    if(user.contains(ID))
+                    {
+                        for(DataSnapshot ds2: ds.getChildren())
+                        {
+                            String desktops = ds2.getKey();
+                            String Naz = "Desktops";
+
+                            if(Naz.contains(desktops))
+                            {
+                                for(DataSnapshot ds3: ds2.getChildren())
+                                {
+                                    String Imya = ds3.getKey();
+                                    listData.add(Imya);
+                                }
+
+                            }
+                        }
+
+                    }
+
                 }
+
                 adapter.notifyDataSetChanged();
             }
             @Override
@@ -71,11 +101,21 @@ public class PekiActivity extends AppCompatActivity {
         };
         mDataBase.addValueEventListener(vListener);
     }
+
     private void SetOnClickItem()
     {
-        listView.setOnItemClickListener((parent, view, position, id) -> {
+        listView.setOnItemClickListener((parent, view, position, id) ->
+        {
+            String user = listData.get(position);
             Intent i = new Intent(PekiActivity.this,ShowActivity.class);
+            i.putExtra("key", user);
             startActivity(i);
+
         });
     }
+public void SignOut(View view)
+{
+    auth.signOut();
+    startActivity(new Intent(PekiActivity.this,MainActivity.class));
+}
 }
