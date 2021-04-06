@@ -248,7 +248,14 @@ namespace PCA
 
 		private void Form1_FormClosed(object sender, FormClosedEventArgs e)
 		{
+			if(e.CloseReason != CloseReason.WindowsShutDown)
 			Program.form4.ShowNotification();
+		}
+
+		private void Form1_Resize(object sender, EventArgs e)
+		{
+			
+			
 		}
 	}
 }

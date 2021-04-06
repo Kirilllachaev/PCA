@@ -62,7 +62,8 @@ namespace PCA
 
 		private void Form3_FormClosed(object sender, FormClosedEventArgs e)
 		{
-			Program.form4.ShowNotification();
+			if (e.CloseReason != CloseReason.WindowsShutDown)
+				Program.form4.ShowNotification();
 		}
 
 		private void Form3_FormClosing(object sender, FormClosingEventArgs e)

@@ -184,10 +184,10 @@
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "Form1";
-			this.ShowInTaskbar = false;
 			this.Text = "Авторизация";
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
 			this.Load += new System.EventHandler(this.Form1_Load);
+			this.Resize += new System.EventHandler(this.Form1_Resize);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

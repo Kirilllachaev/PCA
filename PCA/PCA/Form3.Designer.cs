@@ -164,7 +164,6 @@
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "Form3";
-			this.ShowInTaskbar = false;
 			this.Text = "Комьютер";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form3_FormClosing);
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form3_FormClosed);
