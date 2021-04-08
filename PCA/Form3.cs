@@ -42,16 +42,20 @@ namespace PCA
 						SS.Add(get2.Value.ToString());
 					}
 
-					for (int i = SS.Count-1; i > -1; i--)
+					SS.Reverse();
+
+					foreach (string S in SS)
 					{
 						var tx = new Label();
-						tx.Text = SS[i];
+						tx.Text = S;
 						tx.ForeColor = Color.White;
 						tx.Font = new System.Drawing.Font("Microsoft Sans Serif", 9, System.Drawing.FontStyle.Regular);
 						tx.Size = new Size(195, 25);
 						tx.Margin = new Padding(10, 10, 0, 0);
 						flowLayoutPanel1.Controls.Add(tx);
 					}
+
+					
 				}
 
 

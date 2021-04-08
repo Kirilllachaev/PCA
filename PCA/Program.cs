@@ -94,8 +94,7 @@ namespace PCA
 
 				if (result1 != null)
 				{
-					Program.client.Set("Users/" + Properties.Settings.Default.USID.ToString() + "/Desktops/" + SystemInformation.ComputerName.ToString() +
-						"/Story/" + DateTime.Now.ToShortTimeString(), "Включение | " + DateTime.Now.ToShortDateString() + " | " + DateTime.Now.ToShortTimeString());
+					
 
 					UserIsCorrect = true;
 					form3 = new Form3();
