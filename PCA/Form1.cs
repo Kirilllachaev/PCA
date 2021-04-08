@@ -71,29 +71,29 @@ namespace PCA
 
 						if (data.pass == passR)
 						{
-
-							FirebaseResponse response2 = Program.client.Get("Users/" + nameR + "/Desktops/");
-							Dictionary<string, DeskTop> result2 = response.ResultAs<Dictionary<string, DeskTop>>();
 							
-
+							FirebaseResponse response2 = Program.client.Get("Users/" + nameR + "/Desktops/");
+							Dictionary<string, DeskTop> result2 = response2.ResultAs<Dictionary<string, DeskTop>>();
 
 							bool already = false;
-							float baseindex = 0;
 
-
-							foreach (var get2 in result2)
-							{
-								baseindex++;
-
-								if (get2.Value.Name == SystemInformation.ComputerName)
+							if(result2 != null)
+                            {
+								foreach (var get2 in result2)
 								{
-									already = true;
-								}
+									
+									if (get2.Value.Name == SystemInformation.ComputerName)
+									{
+										already = true;
+									}
 
+								}
 							}
+							
 
 							if (!already)
 							{
+								
 								var desk = new DeskTop()
 								{
 									Name = SystemInformation.ComputerName,
