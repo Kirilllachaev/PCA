@@ -24,7 +24,19 @@ namespace PCA
 			//this.FormBorderStyle = FormBorderStyle.None;
 			//this.MouseDown += new MouseEventHandler(Form3_MouseDown);
 
-            if (Program.UserIsCorrect)
+			if (Program.UserIsCorrect && Program.AutoStart)
+			{
+
+				if (Program.UserIsCorrect)
+				{
+					Program.client.Set("Users/" + Properties.Settings.Default.USID.ToString() + "/Desktops/" + SystemInformation.ComputerName.ToString() +
+						"/Story/" + DateTime.Now.ToShortTimeString(), "Включение | " + DateTime.Now.ToShortDateString() + " | " + DateTime.Now.ToShortTimeString());
+				}
+				Program.AutoStart = false;
+
+			}
+
+			if (Program.UserIsCorrect)
             {
 				label1.Text = Properties.Settings.Default.UsName;
 				label2.Text = SystemInformation.ComputerName;
@@ -114,16 +126,7 @@ namespace PCA
 
 		private void Form3_Load(object sender, EventArgs e)
 		{
-			if (Program.UserIsCorrect && Program.AutoStart)
-			{
-
-				if (Program.UserIsCorrect)
-				{
-					Program.client.Set("Users/" + Properties.Settings.Default.USID.ToString() + "/Desktops/" + SystemInformation.ComputerName.ToString() +
-						"/Story/" + DateTime.Now.ToShortTimeString(), "Включение | " + DateTime.Now.ToShortDateString() + " | " + DateTime.Now.ToShortTimeString());
-				}
-
-			}
+			
 		}
 
 		private void label1_Click(object sender, EventArgs e)
