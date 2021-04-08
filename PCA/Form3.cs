@@ -100,6 +100,10 @@ namespace PCA
 		{
 			if (e.CloseReason != CloseReason.WindowsShutDown)
 				Program.form4.ShowNotification();
+
+
+
+
 		}
 
 		private void Form3_FormClosing(object sender, FormClosingEventArgs e)
@@ -110,7 +114,16 @@ namespace PCA
 
 		private void Form3_Load(object sender, EventArgs e)
 		{
+			if (Program.UserIsCorrect && Program.AutoStart)
+			{
 
+				if (Program.UserIsCorrect)
+				{
+					Program.client.Set("Users/" + Properties.Settings.Default.USID.ToString() + "/Desktops/" + SystemInformation.ComputerName.ToString() +
+						"/Story/" + DateTime.Now.ToShortTimeString(), "Включение | " + DateTime.Now.ToShortDateString() + " | " + DateTime.Now.ToShortTimeString());
+				}
+
+			}
 		}
 
 		private void label1_Click(object sender, EventArgs e)
